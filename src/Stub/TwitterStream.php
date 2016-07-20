@@ -60,7 +60,7 @@ Content-Type: application/json";
         }
 
         do {
-            if (false === ($buf = socket_read($client, 2048, PHP_NORMAL_READ))) {
+            if (false === ($buf = socket_read($client, 2048))) {
                 throw new \RuntimeException(sprintf('Failed to read socket : "%s"', socket_strerror(socket_last_error($server))));
             }
 
