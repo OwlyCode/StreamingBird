@@ -1,5 +1,7 @@
 StreamingBird is an automatically tested, PSR-4 compliant client for Twitter's streaming API.
 
+[![Build Status](https://travis-ci.org/OwlyCode/StreamingBird.svg?branch=master)](https://travis-ci.org/OwlyCode/StreamingBird)
+
 How to install
 --------------
 
