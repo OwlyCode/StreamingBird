@@ -36,7 +36,7 @@ class ConnectionTest extends \PHPUnit_Framework_TestCase
      */
     protected function runServer($name)
     {
-        $this->server = new Process(sprintf('%s/Resources/bin/stub-%s.php', __DIR__, $name));
+        $this->server = new Process(sprintf('php %s/Resources/bin/stub-%s.php', __DIR__, $name));
         $this->server->start();
         sleep(1);
     }

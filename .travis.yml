@@ -5,11 +5,8 @@ php:
   - 'nightly'
   - 'hhvm'
 
-before_script:
-  - echo "extension = sockets.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-
 before_install:
   - composer self-update
 
 install:
-  - composer --prefer-source -n install
+  - composer --prefer-dist -n install
