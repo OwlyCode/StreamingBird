@@ -14,7 +14,7 @@ class StreamReader
     const METHOD_USER     = 'user';
     const METHOD_SITE     = 'site';
 
-    const URLS = [
+    private $endpoints = [
         'site'     => 'https://sitestream.twitter.com/1.1/site.json',
         'user'     => 'https://userstream.twitter.com/2/user.json',
         'filter'   => 'https://stream.twitter.com/1.1/statuses/filter.json',
@@ -134,7 +134,7 @@ class StreamReader
      */
     protected function connect($timeout = 5, $attempts = 10)
     {
-        $url      = self::URLS[$this->method];
+        $url      = $this->endpoints[$this->method];
         $urlParts = parse_url($url);
         $scheme   = $urlParts['scheme'] == 'https' ? 'ssl://' : 'tcp://';
         $port     = $urlParts['scheme'] == 'https' ? 443 : 80;
