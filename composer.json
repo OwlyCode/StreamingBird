@@ -4,7 +4,7 @@
     "keywords": ["php", "twitter", "streaming", "api"],
     "type": "library",
     "homepage": "https://github.com/OwlyCode/StreamingBird",
-    "license": "GPL",
+    "license": "LGPL-2.0-only",
     "authors": [
         {
             "name": "OwlyCode",
